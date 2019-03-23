@@ -1,0 +1,48 @@
+.something-meaningful {
+    background: #655;
+    padding: .8em;
+
+    /* Styling */
+    text-align: center;
+    height: 10em;
+    width: 10em;
+    margin: 1em auto 0;
+    color: white;
+    font: 100%/1 sans-serif;
+}
+.something-meaningful > div {
+    background: tan;
+    border-radius: .8em;
+    padding: 1em;
+}
+/*.something-meaningful {
+    background: #655;
+    padding: .8em;
+}
+.something-meaningful > div {
+    background: tan;
+    border-radius: .8em;
+    padding: 1em;
+}*/
+
+/**
+ * Inner rounding
+ */
+
+.box-shadow {
+    outline: .6em solid #655;
+    box-shadow: 0 0 0 .4em #655; /* todo calculate max of this */
+
+    max-width: 10em;
+    border-radius: .8em;
+    background: tan;
+
+    /* Styling */
+    text-align: center;
+    height: 10em;
+    width: 10em;
+    padding: 1em;
+    margin: 1em auto 0;
+    color: white;
+    font: 100%/1 sans-serif;
+}

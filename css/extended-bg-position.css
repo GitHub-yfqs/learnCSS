@@ -1,0 +1,61 @@
+.background-position{
+    /*提供一个回退方案也很简单，就是把老套的bottom right 定位值写进 background 的简写属性中*/
+    background: url("http://csssecrets.io/images/code-pirate.svg") no-repeat bottom right #58a;
+    background-position: right 10px bottom 10px;
+
+    height: 10em;
+    width: 10em;
+    padding: 10px;
+    margin: 2em auto 0;
+    color: white;
+    font: 100%/1 sans-serif;
+}
+
+
+/**
+ * Flexible background positioning
+ * via extended background-position
+ */
+
+.background-origin {
+    /*它的视觉效果跟图 2-13 是完全一样的，但我们的代码变得更加 DRY
+    了。另外别忘了，在必要时可以把这两种技巧组合起来！如果你想让偏
+    移量与内边距稍稍有些不同（比如稍微收敛或超出），那么可以在使用
+    background-origin: content-box 的同时，再通过 background-position
+    的扩展语法来设置这些额外的偏移量。*/
+    background: url(http://csssecrets.io/images/code-pirate.svg)
+    no-repeat bottom right #58a;
+    background-origin: content-box;
+
+    /* Styling */
+    height: 10em;
+    width: 10em;
+    padding: 10px;
+    margin: 2em auto 0;
+    color: white;
+    font: 100%/1 sans-serif;
+}
+
+/**
+ * Flexible background positioning
+ * via calc()
+ */
+
+.background-position-calc {
+    /*把背景图片定位到距离底边 10px 且
+    距离右边 20px 的位置。如果我们仍然以左上角偏移的思路来考虑，其实
+    就是希望它有一个 100% - 20px 的水平偏移量，以及 100% - 10px 的垂直
+    偏移量。谢天谢地，calc() 函数允许我们执行此类运算，它可以完美地在
+    background-position 属性中使用：*/
+    background: url(http://csssecrets.io/images/code-pirate.svg)
+    no-repeat bottom right #58a;
+    background-position: calc(100% - 20px) calc(100% - 10px);
+
+    /* Styling */
+    height: 10em;
+    width: 10em;
+    padding: 10px;
+    margin: 2em auto 0;
+    color: white;
+    font: 100%/1 sans-serif;
+}
